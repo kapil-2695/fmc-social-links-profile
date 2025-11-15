@@ -61,10 +61,15 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
     gap: var(--spacing-200);
     background-color: var(--clr-gray-800);
     
+    /* margin value is respected when screen size goes below min-width */
+    margin: var(--spacing-100);
     /* limit max width on large screens */
     max-width: 368px; 
     /* subtract margin value from dynamic width */
     width: calc(100% - var(--spacing-100) * 2); 
+    /* min-width avoids overflow of content within the card */
+    /* min-content adjusts card width by sqeezing content as much as possible */
+    min-width: min-content;
 
     text-align: center;
     color: var(--clr-white);
