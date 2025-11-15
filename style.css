@@ -139,4 +139,5 @@ footer {
 }
 .attribution a {
     color: var(--clr-white);
+    text-decoration: underline;
 }
