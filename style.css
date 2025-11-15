@@ -37,19 +37,20 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: var(--clr-gray-900);
 }
 
-button {
-    border: none;
+a {
+    text-decoration: none;
     font: inherit;
 }
 
 /* layout design */
 .site-wrapper {
-    background-color: var(--clr-gray-900);
     display: grid;
     grid-template-rows: auto 2rem;
     min-height: 100vh;
+    min-width: fit-content;
 }
 
 footer {
@@ -64,9 +65,11 @@ footer {
     place-self: center;
     display: grid;
     gap: var(--spacing-200);
+    margin: var(--spacing-100);
     background-color: var(--clr-gray-800);
     max-width: 368px;
     width: calc(100% - var(--spacing-100) * 2);
+    min-width: min-content;
     text-align: center;
     color: var(--clr-white);
     border-radius: 1rem;
@@ -96,9 +99,10 @@ footer {
 .social-card__links {
     display: grid;
     gap: var(--spacing-75);
+    width: 100%;
 }
 
-.social-card__button {
+.social-card__links > a {
     background-color: var(--clr-gray-700);
     font-weight: 700;
     padding-block: var(--spacing-100);
@@ -107,7 +111,7 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
-.social-card__button:hover {
+.social-card__links > a:hover {
     cursor: pointer;
     background-color: var(--clr-green);
     color: var(--clr-gray-900);
